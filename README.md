@@ -4,7 +4,6 @@ g++ -I/home/kannagi/Documents/Projet/assimp-master/include main.cpp load.cpp bcm
 or use make
 
 example :
-
 BCMconvert name.obj
 
 
