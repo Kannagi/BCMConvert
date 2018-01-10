@@ -1,0 +1,513 @@
+# depslib dependency file v1.0
+1413744406 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GLUT_evenement.c
+	<stdlib.h>
+	<stdio.h>
+	<GL/freeglut.h>
+	"MNS.h"
+
+1501061165 /home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS.h
+	"MNS_type.h"
+	"MNS_structure.h"
+	"MNS_GL_structure.h"
+
+1392551977 /home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_type.h
+
+1380188082 /home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_structure.h
+
+1501025290 /home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_structure.h
+
+1392551862 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_2D.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<string.h>
+	<float.h>
+	"MNS.h"
+
+1382280796 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_Camera.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<float.h>
+	"MNS_type.h"
+	"MNS_GL_structure.h"
+
+1392562800 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_Texture.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<string.h>
+	<float.h>
+	"MNS.h"
+
+1380554625 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_animation.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<float.h>
+	"MNS_type.h"
+	"MNS_GL_structure.h"
+
+1501024185 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_load.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<GL/glew.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"MNS.h"
+
+1381120894 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_lumiere.c
+	<stdio.h>
+	<stdlib.h>
+	"MNS.h"
+
+1402229587 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_rendu.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/glew.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<float.h>
+	"MNS.h"
+
+1392562540 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_GL_shader.c
+	<stdio.h>
+	<stdlib.h>
+	<GL/glew.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/freeglut.h>
+	"MNS.h"
+
+1380184192 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_fps.c
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	"MNS_structure.h"
+
+1380554625 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_read_write.c
+	<stdio.h>
+	<stdlib.h>
+
+1381013383 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_rotation.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<float.h>
+	"MNS_structure.h"
+
+1380422190 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_script.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1392551897 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/MNS_type.c
+	<stdlib.h>
+	<stdio.h>
+	"MNS.h"
+
+1501065558 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/bcm.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MNS.h"
+
+1392558370 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/bmp.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MNS_structure.h"
+
+1501065537 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/obj.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MNS.h"
+
+1392558479 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/pcx.c
+	<stdio.h>
+	<stdlib.h>
+	"MNS_structure.h"
+
+1392558570 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/png.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<libpng10/png.h>
+	<png.h>
+	"MNS_structure.h"
+
+1501055773 source:/home/kannagi/Documents/Projet/BCM_Convert/MNS/smd.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	<GL/glew.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	"MNS.h"
+
+1500508555 source:/home/kannagi/Documents/Projet/BCM_Convert/game.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<GL/glew.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<GL/freeglut.h>
+	"MNS/MNS.h"
+
+1515430228 source:/home/kannagi/Documents/Projet/BCM_Convert/main.c
+	<stdio.h>
+	<stdlib.h>
+	"bcm.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/cimport.h
+	<assimp/types.h>
+	"importerdesc.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/types.h
+	<sys/types.h>
+	<stddef.h>
+	<string.h>
+	<limits.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<cstring>
+	<new>
+	<string>
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/defs.h
+	<assimp/config.h>
+
+1501070825 /home/kannagi/Documents/Projet/assimp-master/include//assimp/config.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/vector3.h
+	<cmath>
+	<math.h>
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/vector2.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"defs.h"
+	"./Compiler/poppack1.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/Compiler/pushpack1.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/Compiler/poppack1.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/color4.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/matrix3x3.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/matrix4x4.h
+	"vector3.h"
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/quaternion.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/vector2.inl
+	"vector2.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/vector3.inl
+	"vector3.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/color4.inl
+	"color4.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/quaternion.inl
+	"quaternion.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<cmath>
+	<limits>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/importerdesc.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+	"metadata.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/mesh.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/light.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/camera.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/material.inl
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/anim.h
+	<assimp/types.h>
+	<assimp/quaternion.h>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/metadata.h
+	"Compiler/pstdint.h"
+	<stdint.h>
+	<string>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/Compiler/pstdint.h
+	<stddef.h>
+	<limits.h>
+	<signal.h>
+	<stdint.h>
+	<sys/inttypes.h>
+	<wchar.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include//assimp/postprocess.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/cimport.h
+	<assimp/types.h>
+	"importerdesc.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/types.h
+	<sys/types.h>
+	<stddef.h>
+	<string.h>
+	<limits.h>
+	"defs.h"
+	"vector3.h"
+	"vector2.h"
+	"color4.h"
+	"matrix3x3.h"
+	"matrix4x4.h"
+	"quaternion.h"
+	<cstring>
+	<new>
+	<string>
+	"vector2.inl"
+	"vector3.inl"
+	"color4.inl"
+	"quaternion.inl"
+	"matrix3x3.inl"
+	"matrix4x4.inl"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/defs.h
+	<assimp/config.h>
+
+1501070825 /home/kannagi/Documents/Projet/assimp-master/include/assimp/config.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/vector3.h
+	<cmath>
+	<math.h>
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/vector2.h
+	<cmath>
+	<math.h>
+	"./Compiler/pushpack1.h"
+	"defs.h"
+	"./Compiler/poppack1.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/Compiler/pushpack1.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/Compiler/poppack1.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/color4.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/matrix3x3.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/matrix4x4.h
+	"vector3.h"
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/quaternion.h
+	"defs.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/vector2.inl
+	"vector2.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/vector3.inl
+	"vector3.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/color4.inl
+	"color4.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/quaternion.inl
+	"quaternion.h"
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/matrix3x3.inl
+	"matrix3x3.h"
+	"matrix4x4.h"
+	<algorithm>
+	<cmath>
+	<limits>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/matrix4x4.inl
+	"matrix4x4.h"
+	"matrix3x3.h"
+	"quaternion.h"
+	<algorithm>
+	<limits>
+	<cmath>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/importerdesc.h
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/scene.h
+	"types.h"
+	"texture.h"
+	"mesh.h"
+	"light.h"
+	"camera.h"
+	"material.h"
+	"anim.h"
+	"metadata.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/texture.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/mesh.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/light.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/camera.h
+	"types.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/material.h
+	"types.h"
+	"./Compiler/pushpack1.h"
+	"./Compiler/poppack1.h"
+	"material.inl"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/material.inl
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/anim.h
+	<assimp/types.h>
+	<assimp/quaternion.h>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/metadata.h
+	"Compiler/pstdint.h"
+	<stdint.h>
+	<string>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/Compiler/pstdint.h
+	<stddef.h>
+	<limits.h>
+	<signal.h>
+	<stdint.h>
+	<sys/inttypes.h>
+	<wchar.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/postprocess.h
+	"types.h"
+
+1515505934 source:/home/kannagi/Documents/Projet/BCM_Convert/main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"bcm.h"
+
+1500968814 /home/kannagi/Documents/Projet/assimp-master/include/assimp/Importer.hpp
+	<assimp/types.h>
+
+1515428189 source:/home/kannagi/Documents/Projet/BCM_Convert/bcm.c
+	<stdio.h>
+	<stdlib.h>
+	"bcm.h"
+
+1515513745 /home/kannagi/Documents/Projet/BCM_Convert/bcm.h
+
+1515431623 source:/home/kannagi/Documents/Projet/BCM_Convert/load.c
+	<stdio.h>
+	<stdlib.h>
+	<assimp/cimport.h>
+	<assimp/scene.h>
+	<assimp/postprocess.h>
+	"bcm.h"
+
+1515526763 source:/home/kannagi/Documents/Projet/BCM_Convert/bcm.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"bcm.h"
+
+1515541500 source:/home/kannagi/Documents/Projet/BCM_Convert/load.cpp
+	<stdio.h>
+	<stdlib.h>
+	<assimp/cimport.h>
+	<assimp/scene.h>
+	<assimp/postprocess.h>
+	"bcm.h"
+
+1515450607 source:/home/kannagi/Documents/Projet/BCM_Convert/Convert_ArrayToIndex.cpp
+	<stdio.h>
+	<stdlib.h>
+	"bcm.h"
+
