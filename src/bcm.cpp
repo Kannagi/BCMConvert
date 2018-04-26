@@ -4,7 +4,7 @@
 
 #include "bcm.h"
 
-void Init_BCM(BCM_Header *bcm)
+void BCM_Init(BCM_Header *bcm)
 {
 	bcm->tag[0] = 'B';
 	bcm->tag[1] = 'C';
@@ -36,30 +36,37 @@ void Init_BCM(BCM_Header *bcm)
 	bcm->unused[3] = 0;
 }
 
-void Write_BCM( char *path,BCM_Header *bcm,Model3D *model)
+void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 {
 	FILE *file;
 	file = fopen(path,"wb");
-	int i,l,n,j,type = sizeof(float);
+	int i,l,n,j,sizev = sizeof(float),sizeindex = sizeof(unsigned short);
 
 	if(file == NULL) return;
 
 	fwrite(bcm,1,sizeof(BCM_Header),file);
 
+	printf("%d %x\n",sizeof(BCM_Header),sizeof(BCM_Header));
+
+
+	if(bcm->flags1 & BCM_INDEX_U32) sizeindex = sizeof(unsigned int);
+	if(bcm->flags1 & BCM_FIXEDPOINT) sizev = sizeof(unsigned short);
+
+
 	if(bcm->nv > 0)
 	{
 		if(bcm->flags1 & BCM_VERTEX)
-			fwrite(model->v,type,bcm->nv*3,file);
+			fwrite(model->v,sizev,bcm->nv*3,file);
 
 		if(bcm->flags1 & BCM_TEXTCOORD)
-			fwrite(model->vt,type,bcm->nv*2,file);
+			fwrite(model->vt,sizev,bcm->nv*2,file);
 
 		if(bcm->flags1 & BCM_NORMAL)
-			fwrite(model->vn,type,bcm->nv*3,file);
+			fwrite(model->vn,sizev,bcm->nv*3,file);
 	}
 
 	if(bcm->flags1 & BCM_INDEX)
-		fwrite(model->f,sizeof(unsigned short),bcm->nf*3,file);
+		fwrite(model->index,sizeindex,bcm->nf*3,file);
 
 
 	if(bcm->ntexture > 0)
@@ -75,6 +82,13 @@ void Write_BCM( char *path,BCM_Header *bcm,Model3D *model)
 				fputc(0,file);
 		}
 	}
+
+	if(bcm->flags1 & BCM_GROUP)
+	{
+		fwrite(model->groupvertex,sizeof(unsigned int),bcm->ngroup,file);
+		fwrite(model->groupface,sizeof(unsigned int),bcm->ngroup,file);
+	}
+
 
 	if(bcm->flags1 & BCM_ANIM)
 	{

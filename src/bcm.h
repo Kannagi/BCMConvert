@@ -4,10 +4,10 @@
 typedef struct
 {
     char tag[4];
-    char flags1,flags2,namelen,weightslen;
+    unsigned char flags1,flags2,namelen,weightslen;
     float Xmin,Xmax,Ymin,Ymax,Zmin,Zmax;
     int nv,nf;
-    int ntexture,nbones,ntime;
+    int ntexture,nbones,ntime,ngroup;
     int unused[4];
 
 }BCM_Header;
@@ -20,9 +20,9 @@ enum
 	BCM_INDEX = 0x08,
 	BCM_ANIM = 0x10,
 
-	BCM_U16BITS = 0x40,
-	BCM_FIXEDPOINT = 0x80,
-
+	BCM_INDEX_U32 = 0x20,
+	BCM_FIXEDPOINT = 0x40,
+	BCM_GROUP = 0x80,
 
 
 	BCM_POLY_TRIANGLE = 0x00,
@@ -35,11 +35,13 @@ enum
 
 typedef struct
 {
-    float *v,*vt,*vn;
+    void *v,*vt,*vn;
     float *skeleton;
     unsigned char *id;
     unsigned char *nodes;
-    unsigned short *f;
+    void *index;
+    unsigned int *groupvertex,*groupface;
+
 
 	int *poly,*poly_begin;
     int *texture_index,*texture_begin;
@@ -47,8 +49,8 @@ typedef struct
 
 }Model3D;
 
-void Init_BCM(BCM_Header *bcm);
-void Write_BCM( char *path,BCM_Header *bcm,Model3D *model);
+void BCM_Init(BCM_Header *bcm);
+void BCM_Write( char *path,BCM_Header *bcm,Model3D *model);
 
 #endif
 
