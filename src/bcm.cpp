@@ -29,29 +29,26 @@ void BCM_Init(BCM_Header *bcm)
 	bcm->ntexture = 0;
 	bcm->nbones = 0;
 	bcm->ntime = 0;
+	bcm->ngroup = 0;
+	bcm->size = 0;
 
 	bcm->unused[0] = 0;
 	bcm->unused[1] = 0;
 	bcm->unused[2] = 0;
-	bcm->unused[3] = 0;
 }
 
 void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 {
 	FILE *file;
-	file = fopen(path,"wb");
+	file = fopen("zack.bcm","wb");
 	int i,l,n,j,sizev = sizeof(float),sizeindex = sizeof(unsigned short);
 
 	if(file == NULL) return;
 
 	fwrite(bcm,1,sizeof(BCM_Header),file);
 
-	printf("%d %x\n",sizeof(BCM_Header),sizeof(BCM_Header));
-
-
 	if(bcm->flags1 & BCM_INDEX_U32) sizeindex = sizeof(unsigned int);
 	if(bcm->flags1 & BCM_FIXEDPOINT) sizev = sizeof(unsigned short);
-
 
 	if(bcm->nv > 0)
 	{
@@ -68,7 +65,6 @@ void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 	if(bcm->flags1 & BCM_INDEX)
 		fwrite(model->index,sizeindex,bcm->nf*3,file);
 
-
 	if(bcm->ntexture > 0)
 	{
 		fwrite(model->texture_begin,sizeof(int),bcm->ntexture,file);
@@ -83,6 +79,7 @@ void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 		}
 	}
 
+
 	if(bcm->flags1 & BCM_GROUP)
 	{
 		fwrite(model->groupvertex,sizeof(unsigned int),bcm->ngroup,file);
@@ -92,7 +89,7 @@ void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 
 	if(bcm->flags1 & BCM_ANIM)
 	{
-		fwrite(model->id,sizeof(unsigned char),bcm->nv,file);
+		fwrite(model->bones,sizeof(unsigned int),bcm->nbones,file);
 	}
 
 

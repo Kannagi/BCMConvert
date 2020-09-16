@@ -8,12 +8,13 @@ typedef struct
     float Xmin,Xmax,Ymin,Ymax,Zmin,Zmax;
     int nv,nf;
     int ntexture,nbones,ntime,ngroup;
-    int unused[4];
+    unsigned int size,unused[3];
 
 }BCM_Header;
 
 enum
 {
+	//Flag 1
 	BCM_VERTEX = 0x01,
 	BCM_TEXTCOORD = 0x02,
 	BCM_NORMAL = 0x04,
@@ -24,7 +25,7 @@ enum
 	BCM_FIXEDPOINT = 0x40,
 	BCM_GROUP = 0x80,
 
-
+	//Flag 2
 	BCM_POLY_TRIANGLE = 0x00,
 	BCM_POLY_TRIANGLE_STRIP = 0x01,
 	BCM_POLY_TRIANGLE_AND_STRIPS = 0x02,
@@ -35,17 +36,12 @@ enum
 
 typedef struct
 {
-    void *v,*vt,*vn;
-    float *skeleton;
-    unsigned char *id;
-    unsigned char *nodes;
+    void *v,*vt,*vn,*vc;
     void *index;
     unsigned int *groupvertex,*groupface;
-
-
-	int *poly,*poly_begin;
-    int *texture_index,*texture_begin;
+    int *texture_index,*texture_begin,*bones_begin;
 	char **name;
+	unsigned int *bones,nbones;
 
 }Model3D;
 
