@@ -12,24 +12,24 @@ LD = g++
 WINDRES = windres
 
 INC = 
-CFLAGS = -fexpensive-optimizations -Os -w
+CFLAGS = -fexpensive-optimizations -O3 -w -s -g
 RESINC = 
 LIBDIR = 
 LIB = 
 LDFLAGS = -s
 
 INC_CONSOLE = $(INC)
-CFLAGS_CONSOLE = $(CFLAGS) -O3 -w
+CFLAGS_CONSOLE = $(CFLAGS)
 RESINC_CONSOLE = $(RESINC)
 RCFLAGS_CONSOLE = $(RCFLAGS)
 LIBDIR_CONSOLE = $(LIBDIR)
 LIB_CONSOLE = $(LIB)-lassimp
 LDFLAGS_CONSOLE = $(LDFLAGS)
-OBJDIR_CONSOLE = 0bj
+OBJDIR_CONSOLE = ../0bj
 DEP_CONSOLE = 
-OUT_CONSOLE = Bin/BCMconvert
+OUT_CONSOLE = ../Bin/BCMconvert
 
-OBJ_CONSOLE = $(OBJDIR_CONSOLE)/bcm.o $(OBJDIR_CONSOLE)/load.o $(OBJDIR_CONSOLE)/main.o
+OBJ_CONSOLE = $(OBJDIR_CONSOLE)/bcm.o $(OBJDIR_CONSOLE)/fixp.o $(OBJDIR_CONSOLE)/index.o $(OBJDIR_CONSOLE)/load.o $(OBJDIR_CONSOLE)/main.o
 
 all: console
 
@@ -44,10 +44,16 @@ after_console:
 console: before_console out_console after_console
 
 out_console: before_console $(OBJ_CONSOLE) $(DEP_CONSOLE)
-	$(LD) $(LDFLAGS_CONSOLE) $(LIBDIR_CONSOLE) $(OBJ_CONSOLE) $(LIB_CONSOLE) -o $(OUT_CONSOLE)
+	$(LD) $(LIBDIR_CONSOLE) -o $(OUT_CONSOLE) $(OBJ_CONSOLE)  $(LDFLAGS_CONSOLE) $(LIB_CONSOLE) -g
 
 $(OBJDIR_CONSOLE)/bcm.o: bcm.cpp
 	$(CC) $(CFLAGS_CONSOLE) $(INC_CONSOLE) -c bcm.cpp -o $(OBJDIR_CONSOLE)/bcm.o
+
+$(OBJDIR_CONSOLE)/fixp.o: fixp.cpp
+	$(CXX) $(CFLAGS_CONSOLE) $(INC_CONSOLE) -c fixp.cpp -o $(OBJDIR_CONSOLE)/fixp.o
+
+$(OBJDIR_CONSOLE)/index.o: index.cpp
+	$(CXX) $(CFLAGS_CONSOLE) $(INC_CONSOLE) -c index.cpp -o $(OBJDIR_CONSOLE)/index.o
 
 $(OBJDIR_CONSOLE)/load.o: load.cpp
 	$(CC) $(CFLAGS_CONSOLE) $(INC_CONSOLE) -c load.cpp -o $(OBJDIR_CONSOLE)/load.o
@@ -57,8 +63,8 @@ $(OBJDIR_CONSOLE)/main.o: main.cpp
 
 clean_console: 
 	rm -f $(OBJ_CONSOLE) $(OUT_CONSOLE)
-	rm -rf Bin
-	rm -rf $(OBJDIR_CONSOLE)
+	#rm -rf Bin
+	#rm -rf $(OBJDIR_CONSOLE)
 
 .PHONY: before_console after_console clean_console
 
