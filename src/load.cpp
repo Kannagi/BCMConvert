@@ -43,7 +43,7 @@ void Load_assimp(const char *path,BCM_Header *bcm,Model3D *model,int *option)
 	scene = m_LocalImporter.ReadFile(path,flags );
 
 
-    Load_assimp_FixeA(scene,bcm->flags1,10);
+    Load_assimp_FixeA(scene,bcm->flags1,1);
 
 	//flags |= aiProcess_SplitByBoneCount;
 	//m_LocalImporter.SetPropertyInteger(AI_CONFIG_PP_SBBC_MAX_BONES,1);
@@ -150,6 +150,11 @@ void Load_assimp(const char *path,BCM_Header *bcm,Model3D *model,int *option)
 	}
 
 	printf("vertex : %d face : %d bones %d\n",bcm->nv,bcm->nf,bcm->nbones );
+    if(bcm->nbones)
+	{
+		model->bones_begin = ( int *)malloc(bcm->nbones*sizeof(int));
+		model->matrix_bones = ( float *)malloc(bcm->nbones*sizeof(float)*16);
+	}
 
 	printf("anim : %d\n",scene->mNumAnimations );
 	//if(bcm->flags1 & BCM_INDEX)

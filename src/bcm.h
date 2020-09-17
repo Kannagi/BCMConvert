@@ -42,6 +42,7 @@ typedef struct
     int *texture_index,*texture_begin,*bones_begin;
 	char **name;
 	unsigned int *bones,nbones;
+	float *matrix_bones;
 
 }Model3D;
 

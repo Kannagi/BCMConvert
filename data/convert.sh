@@ -1,3 +1,3 @@
 #!/bin/bash
-../Bin/BCMconvert zack.smd -novn -PS2
+./BCMconvert zack.ms3d -novn -PS2
 ./demo

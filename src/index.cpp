@@ -50,6 +50,8 @@ std::pair<std::vector<size_t>, std::vector<size_t>> reorder_indices_per_bone(con
                 // old index -> new index
                 reverse_mapping[vertex_id] = new_idx++;
             }
+
+			printf("n: %d\n",k);
         }
 
     }
@@ -130,7 +132,7 @@ void Load_assimp_Index(const aiScene* scene,BCM_Header *bcm,Model3D *model,int *
 	aiBone** bone;
 	aiVertexWeight *weights;
 
-
+	int ib = 0;
 
 
 	for(i = 0;i < scene->mNumMeshes;i++)
@@ -141,8 +143,43 @@ void Load_assimp_Index(const aiScene* scene,BCM_Header *bcm,Model3D *model,int *
         std::vector<size_t> from_new_to_old_idx = maps.second;
 
         normal = mesh->HasNormals();
-//		bone = mesh->mBones;
-//		skl = mesh->HasBones();
+		bone = mesh->mBones;
+		skl = mesh->HasBones();
+		if(skl == true)
+		{
+			bcm->flags1 |= BCM_ANIM;
+			for(l = 0;l < mesh->mNumBones;l++)
+			{
+				n = bone[l]->mNumWeights;
+
+				model->matrix_bones[ib+0] = bone[l]->mOffsetMatrix.a1;
+				model->matrix_bones[ib+1] = bone[l]->mOffsetMatrix.a2;
+				model->matrix_bones[ib+2] = bone[l]->mOffsetMatrix.a3;
+				model->matrix_bones[ib+3] = bone[l]->mOffsetMatrix.a4;
+				ib +=4;
+
+				model->matrix_bones[ib+0] = bone[l]->mOffsetMatrix.b1;
+				model->matrix_bones[ib+1] = bone[l]->mOffsetMatrix.b2;
+				model->matrix_bones[ib+2] = bone[l]->mOffsetMatrix.b3;
+				model->matrix_bones[ib+3] = bone[l]->mOffsetMatrix.b4;
+				ib +=4;
+
+				model->matrix_bones[ib+0] = bone[l]->mOffsetMatrix.c1;
+				model->matrix_bones[ib+1] = bone[l]->mOffsetMatrix.c2;
+				model->matrix_bones[ib+2] = bone[l]->mOffsetMatrix.c3;
+				model->matrix_bones[ib+3] = bone[l]->mOffsetMatrix.c4;
+				ib +=4;
+
+				model->matrix_bones[ib+0] = bone[l]->mOffsetMatrix.d1;
+				model->matrix_bones[ib+1] = bone[l]->mOffsetMatrix.d2;
+				model->matrix_bones[ib+2] = bone[l]->mOffsetMatrix.d3;
+				model->matrix_bones[ib+3] = bone[l]->mOffsetMatrix.d4;
+				ib +=4;
+
+				model->bones_begin[l] = tanim;
+				tanim += n;
+			}
+		}
 
 //		if(skl == true)
 //		{

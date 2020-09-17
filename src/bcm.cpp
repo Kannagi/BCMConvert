@@ -50,6 +50,8 @@ void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 	if(bcm->flags1 & BCM_INDEX_U32) sizeindex = sizeof(unsigned int);
 	if(bcm->flags1 & BCM_FIXEDPOINT) sizev = sizeof(unsigned short);
 
+	if(bcm->flags1 & BCM_NORMAL) printf("ok\n");
+
 	if(bcm->nv > 0)
 	{
 		if(bcm->flags1 & BCM_VERTEX)
@@ -89,7 +91,9 @@ void BCM_Write( char *path,BCM_Header *bcm,Model3D *model)
 
 	if(bcm->flags1 & BCM_ANIM)
 	{
-		fwrite(model->bones,sizeof(unsigned int),bcm->nbones,file);
+		fwrite(model->bones_begin,sizeof(unsigned int),bcm->nbones,file);
+		fwrite(model->matrix_bones,sizeof(float),bcm->nbones*16,file);
+		//fwrite(model->bones,sizeof(unsigned int),bcm->nbones,file);
 	}
 
 
